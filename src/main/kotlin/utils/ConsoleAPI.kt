@@ -7,8 +7,7 @@ const val LINES_TO_SKIP = 40
  *
  * Returns null if EOF has been reached before the function has been called
  */
-fun getLine(prompt: String): String? {
-    print(prompt)
+fun getLine(): String? {
     return readlnOrNull()
 }
 
@@ -17,8 +16,7 @@ fun getLine(prompt: String): String? {
  *
  * Returns null if the input is empty or cannot be converted to an Int
  */
-fun getInt(prompt: String): Int? {
-    print(prompt)
+fun getInt(): Int? {
     val input: String = readlnOrNull() ?: return null
     val output: Int
     try {
@@ -34,8 +32,7 @@ fun getInt(prompt: String): Int? {
  *
  * Returns null if the input is empty or cannot be converted to a Double
  */
-fun getDouble(prompt: String): Double? {
-    print(prompt)
+fun getDouble(): Double? {
     val input: String = readlnOrNull() ?: return null
     val output: Double
     try {
