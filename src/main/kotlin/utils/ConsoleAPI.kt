@@ -19,6 +19,18 @@ fun getInt(prompt: String): Int? {
     }
 }
 
+fun getDouble(prompt: String): Double? {
+    print(prompt)
+    val input: String = readlnOrNull() ?: return null
+    val output: Double
+    try {
+        output = input.toDouble()
+        return output
+    } catch (e: NumberFormatException) {
+        return null
+    }
+}
+
 fun clear() {
     for (i in 0 until LINES_TO_SKIP) {
         println()
