@@ -69,7 +69,29 @@ class CLDisplay : Display {
     }
 
     override fun showOptions(title: String, content: String, options: Array<String>): Int {
-        TODO("Not yet implemented")
+        var invalid: Boolean = false
+        do {
+            clear()
+            println(title)
+            if (invalid) {
+                println("Invalid option! Please select a number from 1 to ${options.size}")
+            }
+            println()
+            println(content)
+            println()
+            for (i in 0..options.size) {
+                println("${i+1}) ${options[i]}")
+            }
+            print(">>> ")
+
+            val input: Int? = getInt()
+            if (input != null) {
+                if (input >= 1 && input <= options.size) {
+                    return input
+                }
+            }
+            invalid = true
+        } while (true)
     }
 
     private fun pressEnter() {
