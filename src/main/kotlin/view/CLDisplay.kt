@@ -2,6 +2,7 @@ package view
 
 import utils.clear
 import utils.getInt
+import utils.getLine
 
 class CLDisplay : Display {
 
@@ -40,7 +41,15 @@ class CLDisplay : Display {
     }
 
     override fun showInput(title: String, content: String, invalid: Boolean): String {
-        TODO("Not yet implemented")
+        clear()
+        println(title)
+        if (invalid) {
+            println("Invalid input! Enter a valid value")
+        }
+        println(content)
+        println()
+        print(">>> ")
+        return getLine() ?: return ""
     }
 
     override fun showMessage(title: String, content: String) {
