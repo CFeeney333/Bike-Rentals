@@ -60,7 +60,12 @@ class CLDisplay : Display {
     }
 
     override fun showMessage(title: String, content: String) {
-        TODO("Not yet implemented")
+        // TODO("Again, this is just a simpler form of a general message. All messages can have a title, content, invalid message, options, prompt. Generalize.")
+        clear()
+        println(title)
+        println()
+        println(content)
+        pressEnter()
     }
 
     override fun showOptions(title: String, content: String, options: Array<String>): Int {
