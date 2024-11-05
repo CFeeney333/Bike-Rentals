@@ -41,6 +41,11 @@ class CLDisplay : Display {
         } while (true)
     }
 
+    /**
+     * Prompt the user for input
+     *
+     * Return whatever the user types into the console
+     */
     override fun showInput(title: String, content: String, invalid: Boolean): String {
         // TODO("Maybe take in a validation function? - should validation be done here?")
         clear()
