@@ -13,6 +13,7 @@ class CLDisplay : Display {
      * Keep prompting user until 1 or 2 selected
      */
     override fun showConfirm(title: String, content: String): Int {
+        // TODO("showConfirm is basically specialised showOption. Consider removing")
         var input: Int? = null
         var invalid: Boolean = false
         do {
@@ -41,6 +42,7 @@ class CLDisplay : Display {
     }
 
     override fun showInput(title: String, content: String, invalid: Boolean): String {
+        // TODO("Maybe take in a validation function? - should validation be done here?")
         clear()
         println(title)
         if (invalid) {
