@@ -72,7 +72,7 @@ class CLDisplay : Display {
         TODO("Not yet implemented")
     }
 
-    fun pressEnter() {
+    private fun pressEnter() {
         print("Press the ENTER key to continue... ")
         getLine()
     }
