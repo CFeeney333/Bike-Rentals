@@ -68,6 +68,11 @@ class CLDisplay : Display {
         pressEnter()
     }
 
+    /**
+     * Prompt the user to select an option, until valid option entered
+     *
+     * Returns the number that the user selected, ranging from 1 to the amount of options inclusive
+     */
     override fun showOptions(title: String, content: String, options: Array<String>): Int {
         var invalid: Boolean = false
         do {
