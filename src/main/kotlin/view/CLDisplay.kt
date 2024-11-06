@@ -90,7 +90,7 @@ class CLDisplay : Display {
             println()
             println(content)
             println()
-            for (i in 0..options.size) {
+            for (i in options.indices) {
                 println("${i + 1}) ${options[i]}")
             }
             print(">>> ")
