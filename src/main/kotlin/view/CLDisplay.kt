@@ -14,8 +14,8 @@ class CLDisplay : Display {
      */
     override fun showConfirm(title: String, content: String): Int {
         // TODO("showConfirm is basically specialised showOption. Consider removing")
-        var input: Int? = null
-        var invalid: Boolean = false
+        var input: Int?
+        var invalid = false
         do {
             clear()
             println(title)
@@ -29,7 +29,7 @@ class CLDisplay : Display {
             println("2) No")
             print(">>> ")
 
-            input = getInt();
+            input = getInt()
             if (input == 1) {
                 return 1
             }
@@ -80,7 +80,7 @@ class CLDisplay : Display {
      * Returns the number that the user selected, ranging from 1 to the amount of options inclusive
      */
     override fun showOptions(title: String, content: String, options: Array<String>): Int {
-        var invalid: Boolean = false
+        var invalid = false
         do {
             clear()
             println(title)
