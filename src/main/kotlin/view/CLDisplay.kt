@@ -80,7 +80,7 @@ class CLDisplay : Display {
             println(content)
             println()
             for (i in 0..options.size) {
-                println("${i+1}) ${options[i]}")
+                println("${i + 1}) ${options[i]}")
             }
             print(">>> ")
 
@@ -94,6 +94,9 @@ class CLDisplay : Display {
         } while (true)
     }
 
+    /**
+     * Prompt the user to press enter, and return the function when they do
+     */
     private fun pressEnter() {
         print("Press the ENTER key to continue... ")
         getLine()
