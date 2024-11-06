@@ -59,6 +59,12 @@ class CLDisplay : Display {
         return getLine() ?: return ""
     }
 
+    /**
+     * Show a message to the user
+     *
+     * A message is shown to the user, also prompting them to press Enter to continue
+     * Returns when the user presses Enter
+     */
     override fun showMessage(title: String, content: String) {
         // TODO("Again, this is just a simpler form of a general message. All messages can have a title, content, invalid message, options, prompt. Generalize.")
         clear()
