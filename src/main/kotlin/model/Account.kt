@@ -5,4 +5,4 @@ package model
  *
  * Each system user has an account, with a username and password
  */
-data class Account(var userName: String, var password: String)
+data class Account(var userName: String, var password: String, var accountType: AccountType)
