@@ -3,12 +3,12 @@ package model
 /**
  * A PersonModel manages people and their details, and handles validation
  */
-interface PersonModel<T : Person> {
+abstract class PersonModel<T : Person> {
 
     /**
      * The arraylist of all the people managed by this model
      */
-    val people: ArrayList<T>
+    private val people: ArrayList<T> = ArrayList()
 
     /**
      * Add a person to the collection
