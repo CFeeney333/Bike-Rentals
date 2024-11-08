@@ -8,7 +8,7 @@ abstract class PersonModel<T : Person> {
     /**
      * The arraylist of all the people managed by this model
      */
-    private val people: ArrayList<T> = ArrayList()
+    protected val people: ArrayList<T> = ArrayList()
 
     /**
      * Add a person to the collection
