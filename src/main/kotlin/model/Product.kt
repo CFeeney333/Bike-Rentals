@@ -7,7 +7,7 @@ import java.util.*
  */
 interface Product {
     var id: Long
-    var datePurchased: Int
+    var datePurchased: Date
     var buyingPrice: Double
     var rentalPrice: Double
     var isBroken: Boolean

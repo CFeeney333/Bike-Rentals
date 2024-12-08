@@ -7,7 +7,7 @@ data class Bike(
     var frontGears: Int,
     var backGears: Int,
     override var id: Long,
-    override var datePurchased: Int,
+    override var datePurchased: Date,
     override var buyingPrice: Double,
     override var rentalPrice: Double,
     override var isBroken: Boolean,
