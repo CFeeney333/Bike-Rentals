@@ -7,7 +7,7 @@ import java.util.*
  */
 abstract class ProductModel<T : Product> {
     // TODO: write documentation
-    private val products: ArrayList<T> = ArrayList()
+    protected val products: ArrayList<T> = ArrayList()
 
     fun add(product: T): Boolean {
         return products.add(product)
