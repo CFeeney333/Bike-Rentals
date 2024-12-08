@@ -79,7 +79,7 @@ class CLDisplay : Display {
      *
      * Returns the number that the user selected, ranging from 1 to the amount of options inclusive
      */
-    override fun showOptions(title: String, content: String, options: Array<String>): Int {
+    override fun showOptions(title: String, content: String, options: List<Any>): Int {
         var invalid = false
         do {
             clear()

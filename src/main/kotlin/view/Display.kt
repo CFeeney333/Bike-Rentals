@@ -8,5 +8,5 @@ interface Display {
 
     fun showMessage(title: String, content: String): Unit
 
-    fun showOptions(title: String, content: String, options: Array<String>): Int
+    fun showOptions(title: String, content: String, options: List<Any>): Int
 }
