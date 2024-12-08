@@ -70,7 +70,7 @@ fun main() {
     do {
         val user: User = Login(view, staff, managers).run() ?: break
         when (user.account.accountType) {
-            AccountType.MANAGER -> ManagerSession(view, user).run()
+            AccountType.MANAGER -> ManagerSession(view, user, staff).run()
             AccountType.STAFF -> StaffSession(view, user).run()
         }
     } while (true)
