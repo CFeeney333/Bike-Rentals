@@ -72,7 +72,7 @@ abstract class PersonModel<T : Person> {
      *
      * Return true if the element changed
      */
-    fun updatePhone(person: T, phone: Long): Boolean {
+    fun updatePhone(person: T, phone: String): Boolean {
         if (person.details.phone == phone)
             return false
         else
@@ -169,7 +169,7 @@ abstract class PersonModel<T : Person> {
     /**
      * Return a list of all the people with a given phone number
      */
-    fun searchByPhone(phone: Long): List<T> {
+    fun searchByPhone(phone: String): List<T> {
         return people.filter { it.details.phone == phone }
     }
 
@@ -206,5 +206,16 @@ abstract class PersonModel<T : Person> {
      */
     fun searchByTitle(title: Title): List<T> {
         return people.filter { it.details.name.title == title }
+    }
+
+    /**
+     * Return a list of all the people in the model
+     */
+    fun all(): List<T> {
+        return people.toList()
+    }
+
+    fun get(index: Int): T {
+        return people[index]
     }
 }
