@@ -3,9 +3,9 @@ package model
 import java.util.*
 
 data class Bike(
-    val type: BikeType,
-    val frontGears: Int,
-    val backGears: Int,
+    var type: BikeType,
+    var frontGears: Int,
+    var backGears: Int,
     override var id: Long,
     override var datePurchased: Date,
     override var buyingPrice: Double,
