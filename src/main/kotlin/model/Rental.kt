@@ -7,7 +7,7 @@ data class Rental(
     val bikes: BikeModel = BikeModel(),
     var customer: Customer,
     var user: User,
-    var dateStart: Date,
-    var dateDue: Date,
-    var dateEnd: Date,
+    var dateStart: Int,
+    var dateDue: Int,
+    var dateEnd: Int,
 )
