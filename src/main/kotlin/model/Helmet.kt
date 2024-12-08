@@ -3,8 +3,8 @@ package model
 import java.util.*
 
 data class Helmet(
-    val type: HelmetType,
-    val colour: Colour,
+    var type: HelmetType,
+    var colour: Colour,
     override var id: Long,
     override var datePurchased: Date,
     override var buyingPrice: Double,
