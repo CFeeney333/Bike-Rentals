@@ -29,7 +29,7 @@ class RentalModel {
         return true
     }
 
-    fun updateStartDate(rental: Rental, date: Int): Boolean {
+    fun updateStartDate(rental: Rental, date: Date): Boolean {
         if (rental.dateStart == date)
             return false
         else
@@ -37,7 +37,7 @@ class RentalModel {
         return true
     }
 
-    fun updateDueDate(rental: Rental, date: Int): Boolean {
+    fun updateDueDate(rental: Rental, date: Date): Boolean {
         if (rental.dateDue == date)
             return false
         else
@@ -45,7 +45,7 @@ class RentalModel {
         return true
     }
 
-    fun updateEndDate(rental: Rental, date: Int): Boolean {
+    fun updateEndDate(rental: Rental, date: Date): Boolean {
         if (rental.dateEnd == date)
             return false
         else
@@ -61,15 +61,15 @@ class RentalModel {
         return rentals.filter { rental -> rental.user == user }
     }
 
-    fun searchByDateStart(date: Int): List<Rental> {
+    fun searchByDateStart(date: Date): List<Rental> {
         return rentals.filter { rental -> rental.dateStart == date }
     }
 
-    fun searchByDateDue(date: Int): List<Rental> {
+    fun searchByDateDue(date: Date): List<Rental> {
         return rentals.filter { rental -> rental.dateDue == date }
     }
 
-    fun searchByDateEnd(date: Int): List<Rental> {
+    fun searchByDateEnd(date: Date): List<Rental> {
         return rentals.filter { rental -> rental.dateEnd == date }
     }
 

@@ -25,7 +25,7 @@ abstract class ProductModel<T : Product> {
         return true
     }
 
-    fun updateDatePurchased(product: T, datePurchased: Int): Boolean {
+    fun updateDatePurchased(product: T, datePurchased: Date): Boolean {
         if (product.datePurchased == datePurchased)
             return false
         else
@@ -82,7 +82,7 @@ abstract class ProductModel<T : Product> {
         return products.filter { it.id == id }
     }
 
-    fun searchByDatePurchased(datePurchased: Int): List<T> {
+    fun searchByDatePurchased(datePurchased: Date): List<T> {
         return products.filter { it.datePurchased == datePurchased }
     }
 
