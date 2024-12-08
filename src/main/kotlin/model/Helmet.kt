@@ -1,12 +1,12 @@
 package model
 
-import java.util.*
+import java.time.LocalDate
 
 data class Helmet(
     var type: HelmetType,
     var colour: Colour,
     override var id: Long,
-    override var datePurchased: Date,
+    override var datePurchased: LocalDate,
     override var buyingPrice: Double,
     override var rentalPrice: Double,
     override var isBroken: Boolean,

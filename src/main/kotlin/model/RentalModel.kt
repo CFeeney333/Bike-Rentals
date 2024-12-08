@@ -1,6 +1,6 @@
 package model
 
-import java.util.*
+import java.time.LocalDate
 
 class RentalModel {
     private val rentals = ArrayList<Rental>()
@@ -29,7 +29,7 @@ class RentalModel {
         return true
     }
 
-    fun updateStartDate(rental: Rental, date: Date): Boolean {
+    fun updateStartDate(rental: Rental, date: LocalDate): Boolean {
         if (rental.dateStart == date)
             return false
         else
@@ -37,7 +37,7 @@ class RentalModel {
         return true
     }
 
-    fun updateDueDate(rental: Rental, date: Date): Boolean {
+    fun updateDueDate(rental: Rental, date: LocalDate): Boolean {
         if (rental.dateDue == date)
             return false
         else
@@ -45,7 +45,7 @@ class RentalModel {
         return true
     }
 
-    fun updateEndDate(rental: Rental, date: Date): Boolean {
+    fun updateEndDate(rental: Rental, date: LocalDate): Boolean {
         if (rental.dateEnd == date)
             return false
         else
@@ -61,15 +61,15 @@ class RentalModel {
         return rentals.filter { rental -> rental.user == user }
     }
 
-    fun searchByDateStart(date: Date): List<Rental> {
+    fun searchByDateStart(date: LocalDate): List<Rental> {
         return rentals.filter { rental -> rental.dateStart == date }
     }
 
-    fun searchByDateDue(date: Date): List<Rental> {
+    fun searchByDateDue(date: LocalDate): List<Rental> {
         return rentals.filter { rental -> rental.dateDue == date }
     }
 
-    fun searchByDateEnd(date: Date): List<Rental> {
+    fun searchByDateEnd(date: LocalDate): List<Rental> {
         return rentals.filter { rental -> rental.dateEnd == date }
     }
 
