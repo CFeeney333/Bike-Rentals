@@ -49,19 +49,6 @@ abstract class ProductModel<T : Product> {
         return true
     }
 
-    fun updateRentalPriceForAll(newRentalPrice: Double, withCurrentRentalPrice: Double? = null): Boolean {
-        var anyChange = false
-        for (product in products)
-            if (withCurrentRentalPrice != null) {
-                if (product.rentalPrice == withCurrentRentalPrice) {
-                    anyChange = anyChange || updateRentalPrice(product, newRentalPrice)  // if anyChange is ever set to true, keep it true
-                }
-            } else {
-                anyChange = anyChange || updateRentalPrice(product, newRentalPrice)  // if anyChange is ever set to true, keep it true
-            }
-        return anyChange
-    }
-
     fun setIsBroken(product: T, isBroken: Boolean): Boolean {
         if (product.isBroken == isBroken)
             return false
