@@ -207,4 +207,15 @@ abstract class PersonModel<T : Person> {
     fun searchByTitle(title: Title): List<T> {
         return people.filter { it.details.name.title == title }
     }
+
+    /**
+     * Return a list of all the people in the model
+     */
+    fun all(): List<T> {
+        return people.toList()
+    }
+
+    fun get(index: Int): T {
+        return people[index]
+    }
 }
